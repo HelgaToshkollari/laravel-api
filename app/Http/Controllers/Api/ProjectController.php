@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ProjectController extends Controller
 {
     public function index (){
-        $projects= Project::all();
+        $projects= Project::get();
         return response()->json($projects);
     }
     public function show(Project $project){
